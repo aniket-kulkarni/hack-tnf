@@ -5,8 +5,11 @@ html,body {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    background: lightcoral;
+    font-family: 'robotoregular', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
 }
 
 .hide {
@@ -30,4 +33,8 @@ a {
 
 select,textarea {
     outline : none;
+}
+
+#root,.app-root {
+    height: 100%;
 }

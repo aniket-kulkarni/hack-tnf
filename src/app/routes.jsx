@@ -4,8 +4,9 @@ var app = require('./app');
 
 var routes = (
     <Route path='/' component={app}>
-        <IndexRoute component={require('./view1/view1')}/>
+        <IndexRoute component={require('./home/home')}/>
         <Route path='view2' component={require('./view2/view2')}/>
+        <Route path='register' component={require('./authentication/register')}/>
     </Route>
 );
 

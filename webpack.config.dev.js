@@ -30,11 +30,15 @@ module.exports = {
             include: path.join(__dirname, 'src')
         },
         {
+            test: /\.(jpe?g|png|gif)$/i,
+            loaders: ['url?limit=8192', 'img']
+        },
+        {
             test: /\.css/,
             include: [
                 path.resolve(__dirname, 'src/app')
             ],
-            loaders : ['style', 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]','postcss']
+            loaders : ['style', 'css?modules&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]','postcss']
         },
         {
             test: /\.css/,
