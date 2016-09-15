@@ -84,8 +84,47 @@
 	flex-direction: column;
 }
 
+.tweetBox{
+	max-height: inherit;
+}
+
 .recentActivity {
 	flex-grow: 1;
+	max-height: 250px
+}
+
+.recentActivityIcons, .services {
+	display: flex;
+}
+
+.recentActivityIcon, .servicesIcons {
+	display: flex;
+    flex: 4;
+    text-align: center;
+    margin: 10px;
+}
+
+.servicesIcons{
+	display: inline;
+}
+
+.servicesWrap {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.recentActivityIconLeft {
+	padding : 10px;
+}
+
+.recentActivityIconLeft span {
+	transform: translateY(50%);
+}
+
+.recentActivityIconRight {
+	padding : 10px;
 }
 
 .newActivity {
@@ -95,8 +134,46 @@
 }
 
 .activityLink {
-	margin-right : 10px;
-	color: #0955A4;
+	padding : 15px;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius : 4px;
 	/*color: rgb(0, 188, 212);*/
 	cursor: pointer;
+	position: relative;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12),
+         0 1px 4px rgba(0,0,0,0.12);
+}
+
+.activityLink:nth-child(1) {
+	background-color: #9E9D24;
+
+}
+
+
+.activityLink:nth-child(2) {
+	background-color: #9E9D24;
+
+}
+
+.activityLink:nth-child(3) {
+	background-color: #9E9D24;
+
+}
+
+
+.activityLink:nth-child(4) {
+	background-color: #9E9D24;
+
+}
+
+
+.activityLink:nth-child(5) {
+	background-color: #9E9D24;
+
+}
+
+.activityLink:nth-child(6) {
+	background-color: #9E9D24;
+
 }

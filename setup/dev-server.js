@@ -4,7 +4,7 @@ var config = require('../webpack.config.dev');
 var open = require("open");
 var colors = require('colors');
 
-const port = 3001;
+const port = 3000;
 
 /* eslint-disable no-console */
 
