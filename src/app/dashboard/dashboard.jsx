@@ -78,7 +78,6 @@ class Dashboard extends React.Component {
                         <div className={cx(css.activity,css.card)}>
                             <a className="twitter-timeline"  href="https://twitter.com/search?q=%40tandfauthorserv" data-widget-id="776496587132526593">Tweets about @tandfauthorserve</a>
                         </div>
-                        
                     </div>
                 </section>
             </div>

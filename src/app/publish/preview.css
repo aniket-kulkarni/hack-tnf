@@ -82,3 +82,16 @@
 	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
 	padding: 30px 30px;
 }
+
+.conclusion {
+	font-size: 1.3em;
+	box-sizing: border-box;
+}
+
+.abstract {
+	background: #f1f1f1;
+    padding: 30px 20px;
+    font-weight: normal;
+    border-radius: 5px; 
+    box-sizing: border-box;
+}

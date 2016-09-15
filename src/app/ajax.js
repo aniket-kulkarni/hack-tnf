@@ -103,6 +103,28 @@ function submitRecord(state) {
 	);	
 }
 
+function downloadPDF(url) {
+	
+	var url = BASE_URL + '/api/data/getPdf/1';
+	var metadata = {
+		url : url
+	};
+
+	var params = {
+		method : 'POST',
+		body : JSON.stringify(metadata),
+		headers: new Headers({
+		    'Content-Type': 'application/json',
+		    Accept: 'application/json',
+		    'token': UserStore.getToken()
+		})
+	};
+
+	return (
+		ajax(url,params,false)
+	);
+}
+
 function ajax(url,params,acceptJSON) {
 
 	return new Promise(function(resolve,reject) {
@@ -118,7 +140,16 @@ function ajax(url,params,acceptJSON) {
 				    
 				else if (status >= 200 && status < 300) {
 
-				    if (acceptJSON) {
+					if (response.headers.get('Content-Type').includes('text/pdf')) {
+						response.blob().then((blob) => {
+				            resolve(blob);
+				        })
+				        .catch((err) => {
+				            resolve(err);
+				        });
+					}
+
+				    else if(acceptJSON) {
 				        response.json().then((data) => {
 				            resolve(data);
 				        })
@@ -169,5 +200,6 @@ module.exports = {
 	login,
 	logout,
 	uploadPhotos,
-	submitRecord
+	submitRecord,
+	downloadPDF
 }

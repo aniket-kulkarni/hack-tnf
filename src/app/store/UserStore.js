@@ -29,6 +29,10 @@ class UserStore {
 		return this.token;
 	}
 
+	getUserName() {
+		return this.user.name;
+	}
+
 }
 
 var exportsModule = new UserStore();
