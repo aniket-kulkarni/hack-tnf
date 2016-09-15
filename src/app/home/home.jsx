@@ -3,12 +3,16 @@ var css = require('./home.css');
 var cx = require('classnames');
 var ajax = require('../ajax');
 
+var {browserHistory} = require('react-router');
+
 import FormsyText from 'formsy-material-ui/lib/FormsyText';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
+var UserStore = require('../store/UserStore');
 
 class Home extends React.Component {
 
@@ -43,10 +47,11 @@ class Home extends React.Component {
         var model = this.refs.loginForm.getModel();
         ajax.login(model)
             .then((response) => {
-                console.log(response);
+                UserStore.setUser(response);
+                browserHistory.replace('/dashboard');
             })
             .catch((err) => {
-                console.log(err);
+                alert(err);
             });
     }
 

@@ -1,4 +1,5 @@
 var BASE_URL = 'http://10.42.133.58:3001';
+var UserStore = require('./store/UserStore');
 
 function login(model) {
 	var url = BASE_URL + '/api/auth/login';
@@ -6,6 +7,23 @@ function login(model) {
 		method : 'POST',
 		body : JSON.stringify(model),
 		headers: new Headers({
+		    'Content-Type': 'application/json',
+		    Accept: 'application/json',
+		})
+	};
+
+	return (
+		ajax(url,params,true)
+	);
+}
+
+function logout(token) {
+	var url = BASE_URL + '/api/auth/logout';
+	var params = {
+		method : 'POST',
+		body : JSON.stringify({}),
+		headers: new Headers({
+			token,
 		    'Content-Type': 'application/json',
 		    Accept: 'application/json',
 		})
@@ -38,6 +56,51 @@ function register(model) {
 				console.log(err);
 			})		
 	);
+}
+
+function uploadPhotos(photos) {
+
+	var url = BASE_URL + '/api/data/upload/image';
+
+	var params = {
+		method : 'POST',
+		body : photos,
+		headers: new Headers({
+		    'token': UserStore.getToken()
+		})
+	};
+
+	return (
+		ajax(url,params,true)
+	);	
+}
+
+function submitRecord(state) {
+
+	var url = BASE_URL + '/api/data/metadata';
+	var metadata = {
+		metadata : state
+	};
+
+	var params = {
+		method : 'POST',
+		body : JSON.stringify(metadata),
+		headers: new Headers({
+		    'Content-Type': 'application/json',
+		    Accept: 'application/json',
+		    'token': UserStore.getToken()
+		})
+	};
+
+	return (
+		ajax(url,params,true).
+			then((response) => {
+				console.log(response);
+			})	
+			.catch((err) => {
+				console.log(err);
+			})		
+	);	
 }
 
 function ajax(url,params,acceptJSON) {
@@ -103,5 +166,8 @@ function ajax(url,params,acceptJSON) {
 
 module.exports = {
 	register,
-	login
+	login,
+	logout,
+	uploadPhotos,
+	submitRecord
 }

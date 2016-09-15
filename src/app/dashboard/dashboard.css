@@ -1,0 +1,102 @@
+.root  {
+	height: 100%;
+}
+
+.header {
+	height: 100px;
+	display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+
+.logoWrap {
+	flex : 1;
+}
+
+.logo {
+	font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.logoStrong {
+	color: #0955A4;
+    font-weight: 400;
+}
+
+.logoNormal {
+	color: #666;
+}
+
+.slogan {
+	margin-left: 80px;
+	color: #0955A4;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+
+.content {
+	min-height: calc(100% - 100px);
+	padding-bottom: 15px;
+	display: flex;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.root > hr {
+	border-bottom: none;
+}
+
+.headerActions {
+	position: relative;
+	top : 30px;
+}
+
+.headerActions > a {
+	color: #0955A4;
+}
+
+.left {
+	flex-grow: 1;
+	padding-right: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.right {
+	flex-shrink: 0;
+}
+
+.card {
+	margin : 20px 0;
+	border-radius: 5px;
+	min-height: 100px;
+	padding: 10px 20px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12),
+         0 1px 4px rgba(0,0,0,0.12);
+}
+
+.activity {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.recentActivity {
+	flex-grow: 1;
+}
+
+.newActivity {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.activityLink {
+	margin-right : 10px;
+	color: #0955A4;
+	/*color: rgb(0, 188, 212);*/
+	cursor: pointer;
+}

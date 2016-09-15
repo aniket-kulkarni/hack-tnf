@@ -1,0 +1,84 @@
+.root  {
+	height: 100%;
+}
+
+.header {
+	height: 100px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+	font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.logoStrong {
+	color: #0955A4;
+    font-weight: 400;
+}
+
+.logoNormal {
+	color: #666;
+}
+
+.slogan {
+	text-align: right;
+	color: #0955A4;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+
+.root  hr {
+	border-bottom: none;
+}
+
+.content {
+	min-height: calc(100% - 100px);
+	padding: 0 20px;
+	padding-bottom: 15px;
+}
+
+.findingImage {
+	width: 80%;
+}
+
+.multiple img {
+	width: 80%;
+}
+
+.findings.multiple {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.finding {
+	padding: 20px 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.findingText {
+	text-align: left;
+	margin-left : 10%;
+}
+
+.multiple .finding {
+	width: 30%;
+}
+
+.findingWrap {
+	text-align: center;
+}
+
+.card {
+	box-shadow: 0 1px 6px rgba(0,0,0,0.12), 0 1px 4px rgba(0,0,0,0.12);
+	padding: 30px 30px;
+}

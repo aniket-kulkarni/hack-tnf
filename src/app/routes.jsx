@@ -5,8 +5,9 @@ var app = require('./app');
 var routes = (
     <Route path='/' component={app}>
         <IndexRoute component={require('./home/home')}/>
-        <Route path='view2' component={require('./view2/view2')}/>
-        <Route path='register' component={require('./authentication/register')}/>
+        <Route path='dashboard' component={require('./dashboard/dashboard')}/>
+        <Route path='publish' component={require('./publish/publish')}/>
+        <Route path='preview/type/:type' component={require('./publish/preview')}/>
     </Route>
 );
 

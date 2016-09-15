@@ -1,0 +1,93 @@
+.root  {
+	height: 100%;
+}
+
+.header {
+	height: 100px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.logo {
+	font-size: 2.8em;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.logoStrong {
+	color: #0955A4;
+    font-weight: 400;
+}
+
+.logoNormal {
+	color: #666;
+}
+
+.slogan {
+	text-align: right;
+	color: #0955A4;
+    font-weight: 400;
+    font-size: 1.15em;
+}
+
+.root  hr {
+	border-bottom: none;
+}
+
+.content {
+	min-height: calc(100% - 100px);
+	padding: 0 20px;
+	padding-bottom: 15px;
+}
+
+.abstract {
+	display: flex;
+}
+
+.abstractText {
+	flex-grow: 1;
+	padding: 0 20px;
+}
+
+.abstractText > textarea {
+	width: 100%;
+	height: 60px;
+}
+
+.addNewFinding {
+	margin-bottom: 20px;
+}
+
+.findingItem {
+	margin-bottom: 25px;
+}
+
+.findingItem > textarea {
+	width: 60%;
+	height: 60px;
+}
+
+.conclusion {
+	display: flex;
+}
+
+.loadingWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+}
+
+.loadingText {
+	display: inline-block;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}

@@ -32,6 +32,10 @@
     font-size: 1.15em;
 }
 
+.root > hr {
+	border-bottom: none;
+}
+
 .content {
 	min-height: calc(100% - 100px);
 	padding-bottom: 15px;
@@ -52,9 +56,7 @@
 	padding-right: 30px;
 }
 
-.root > hr {
-	border-bottom: none;
-}
+
 
 .cardHeading {
 	font-weight: 500;
