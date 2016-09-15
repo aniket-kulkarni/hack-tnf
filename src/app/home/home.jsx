@@ -134,7 +134,7 @@ class Home extends React.Component {
                                             name="password"
                                             ref="password"
                                             type="password"
-                                            validations="minLength:6"
+                                            validations="minLength:3"
                                             validationError="Password should be min 6 characters"
                                             required
                                             hintText="Password"
