@@ -10,7 +10,7 @@ class Test {
 }
 
 var test = new Test();
-window.aniket = test;
+window.test = test;
 
 @observer
 class View2 extends React.Component {
