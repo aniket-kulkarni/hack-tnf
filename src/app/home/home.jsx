@@ -70,7 +70,11 @@ class Home extends React.Component {
 
     register = () => {
         var model = this.refs.registerForm.getModel();
-        ajax.register(model);
+        ajax.register(model)
+        .then((response) => {
+            UserStore.setUser(response);
+            browserHistory.replace('/dashboard');
+        });
     }
 
     render() {
@@ -90,9 +94,9 @@ class Home extends React.Component {
                         <div className={css.leftMain}>
                             
                             <section>
-                                <h2 className={css.cardHeading}>Lets talk Product</h2>
+                                <h2 className={css.cardHeading}>Get your research story heard</h2>
                                 <p>
-                                    This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.
+                                    Share your research story – disseminate complex findings fast. Bastille provides the tools you need to share your research and track the benefits of sharing. Create original story boards, posters, video abstracts or presentations using our unique self-service tools to unlock your research
                                 </p>
                             </section>
 
@@ -195,7 +199,7 @@ class Home extends React.Component {
                                         <FormsyText
                                             name="name"
                                             ref="name"
-                                            validations="isAlpha"
+                                            validations="isWords"
                                             validationError="Invalid Name"
                                             required
                                             hintText="Name"
@@ -277,10 +281,9 @@ class Home extends React.Component {
                     </div>
 
                      <section className={css.services}>
-                                <h2>Our Services</h2>
+                                <h2>My research story</h2>
                                 <p className={css.servicesDesc}>
-                                    We are driven by perfectionism and the urge to create high quality WordPress themes and
-                                    provide premium and dedicated support to our customers.
+                                    Create original story boards, posters, video abstracts or presentations using our unique self-service tools and unlock your research.
                                 </p>
                                 <div className={css.servicesList}>
                                     <div className={css.serviceItem}>
