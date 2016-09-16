@@ -29,6 +29,11 @@ class Dashboard extends React.Component {
         return { muiTheme: getMuiTheme(baseTheme) };
     }
 
+    openInNewWindow = () => {
+        var url = 'http://tandfonline.com/doi/full/10.1080/2331205X.2015.1125411';
+        window.open(url,'_blank');
+    }
+
     logout = () => {
         ajax.logout(UserStore.token)
             .then(() => {
@@ -47,20 +52,24 @@ class Dashboard extends React.Component {
     }
 
     render() {
+
+        var flyer = 'If you are on the move, a flyer is q quick and effective way to tell others about your work';
+
+        var video = 'Videos get more views than written content. Describe your research through an animated journey';
+
+        var poster = 'Presenting your research at a confeence or event? Use the poster creation tool to generate your visual';
+
+        var presentation = 'Capture the essence of your research to deliver a clear & powerful presentation';
+
+        var landing = 'Landing Page';
+
+        var cartoon = 'Cartoon';
+
         return (
             <div className={css.root}>
                <header className={css.header}>
                     <div className={css.logoWrap}>
-                        <div className={css.logo}>
-                            <h2 className={css.logoStrong}>Author Services</h2>
-                        </div>
-                        <div className={css.slogan}>
-                            <h4>Supporting Taylor & Francis Authors</h4>
-                        </div>
-                    </div>
-
-                    <div className={css.headerActions}>
-                        <a href="#" onClick={this.logout}>Logout</a>
+                        <img src="../images/logo.png" alt=""/>
                     </div>
                 </header>
                 <section className={css.content}>
@@ -134,41 +143,41 @@ class Dashboard extends React.Component {
                                 <hr />
 
                                 <div className={css.servicesIcons}>
-                                        <div className={css.activityLink} data-type="cartoon" onClick={this.publish}>
+                                        <div className={css.activityLink} style={{zIndex : 6}} data-type="cartoon" onClick={this.publish}>
                                             Cartoon
-                                            <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                            <IconButton tooltipStyles={{fontSize : '14px',zIndex : '100000'}} tooltipPosition="bottom-right" tooltip={cartoon} 
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                             </IconButton>
                                         </div>
                                     
-                                    <div className={css.activityLink} data-type="poster" onClick={this.publish}>
+                                    <div className={css.activityLink} style={{zIndex : 5}} data-type="poster" onClick={this.publish}>
                                         Poster
-                                        <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                        <IconButton tooltipStyles={{fontSize : '14px',zIndex : '100000'}} tooltipPosition="bottom-right" tooltip={poster}
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                         </IconButton>
                                     </div>
-                                    <div className={css.activityLink} data-type="flyer" onClick={this.publish}>
+                                    <div className={css.activityLink} style={{zIndex : 4}} data-type="flyer" onClick={this.publish}>
                                         Flyer
-                                        <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                        <IconButton tooltip={flyer} tooltipPosition="bottom-right" tooltipStyles={{fontSize : '14px',zIndex : '100000'}}
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                         </IconButton>
                                     </div>
-                                    <div className={css.activityLink} data-type="video" onClick={this.publish}>
+                                    <div className={css.activityLink} style={{zIndex : 3}} data-type="video" onClick={this.publish}>
                                         Video Abstract
-                                        <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                        <IconButton tooltipStyles={{fontSize : '14px',zIndex : '100000'}} tooltipPosition="bottom-right" tooltip={video}
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                         </IconButton>
                                     </div>
-                                    <div className={css.activityLink} data-type="landing" onClick={this.publish}>
+                                    <div className={css.activityLink} style={{zIndex : 2}} data-type="landing" onClick={this.publish}>
                                         Landing Page
-                                        <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                        <IconButton tooltipStyles={{fontSize : '14px',zIndex : '100000'}} tooltipPosition="bottom-right" tooltip={landing}
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                         </IconButton>
                                     </div>
-                                    <div className={css.activityLink} data-type="powerpoint" onClick={this.publish}>
+                                    <div className={css.activityLink} style={{zIndex : 1}} data-type="powerpoint" onClick={this.publish}>
                                         Powerpoints
-                                        <IconButton tooltip="Font Icon" 
-                                                style={{position : 'absolute',left : 0,top : '-20px',width : '100%'}}>
+                                        <IconButton tooltipStyles={{fontSize : '14px',zIndex : '100000'}} tooltipPosition="bottom-right" tooltip={presentation}
+                                                style={{position : 'absolute',left : 0,top : '-10px',width : '100%'}}>
                                         </IconButton>
                                     </div>
                                 </div>
@@ -176,7 +185,7 @@ class Dashboard extends React.Component {
                         </div>
                     </div>
                     <div className={css.right}>
-                        <div className={cx(css.welcome,css.card)}>Ad PlaceHoler</div>
+                        <div className={cx(css.welcomeAd,css.card)} onClick={this.openInNewWindow}>Submit your next paper to Journal of Dual Diagnosis. Publication speed of 35 days.</div>
                         <div className={cx(css.activity,css.card), css.tweetBox}>
                             <a className="twitter-timeline"  href="https://twitter.com/search?q=%40tandfauthorserv" data-widget-id="776496587132526593">Tweets about @tandfauthorserve</a>
                         </div>

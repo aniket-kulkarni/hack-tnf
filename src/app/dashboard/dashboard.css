@@ -13,6 +13,11 @@
 
 .logoWrap {
 	flex : 1;
+	padding: 10px;
+}
+
+.logoWrap img {
+	width: 150px;
 }
 
 .logo {
@@ -59,13 +64,14 @@
 
 .right {
 	flex-shrink: 0;
+	width: 450px;
 }
 
 .card {
 	margin : 20px 0;
 	border-radius: 5px;
 	min-height: 100px;
-	padding: 10px 20px;
+	padding: 20px 20px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.12),
          0 1px 4px rgba(0,0,0,0.12);
     background-color: #ffffff;
@@ -149,4 +155,8 @@
 
 .activityLink:nth-child(odd) {
 	background-color: #D69A2B;
+}
+
+.welcomeAd {
+	cursor: pointer;
 }

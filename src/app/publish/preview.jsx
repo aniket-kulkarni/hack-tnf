@@ -24,7 +24,7 @@ class Preview extends React.Component {
 		
 		var formData = new FormData();
 		var content = document.body.parentElement.outerHTML;
-    	var blob = new Blob([JSON.stringify(content, null, 2)], {type : 'text/html'});
+    	var blob = new Blob([content], {type : 'text/html'});
     	formData.append('photos',blob);
 		ajax.uploadPhotos(formData)
 			.then((response) => {
@@ -63,30 +63,22 @@ class Preview extends React.Component {
 	    	});
     	}
     	var tweet = initial;
-                //<a href="#" onClick={this.downloadPDF}>Download PDF</a>
+        
 
         return (
             <div className={css.root}>
                 <header className={css.header}>
                     <div className={css.logoWrap}>
-                        <div className={css.logo}>
-                            <span className={css.logoStrong}>Author</span>
-                            <span  className={css.logoNormal}>Services</span>
-                        </div>
-                        <div className={css.slogan}>
-                            Supporting Taylor & Francis authors
-                        </div>
+                           <a href="/dashboard"> <img src="../../images/logo.png" alt=""/>
+                           </a>
                     </div>
                 </header>
 
-                <hr/>
-
-                <a className="twitter-share-button"
-                  href={`https://twitter.com/intent/tweet?hashtags=MyResearchStory${tweet}`}
-                  data-size="large">
-                Tweet</a>
-
                 <section className={css.content}>
+                	<a className="twitter-share-button"
+                	  href={`https://twitter.com/intent/tweet?hashtags=MyResearchStory${tweet}`}
+                	  data-size="large">
+                	Tweet</a>
 					<h2 className={css.abstract}>
 						{metadata.abstract}
 					</h2>

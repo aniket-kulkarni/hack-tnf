@@ -4,6 +4,10 @@ var UserStore = require('../store/UserStore');
 var ajax = require('../ajax');
 var PublishStore = require('./publish-store');
 var {browserHistory} = require('react-router');
+import RaisedButton from 'material-ui/RaisedButton';
+
+import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 class Publish extends React.Component {
 
@@ -24,6 +28,10 @@ class Publish extends React.Component {
     }
 
     componentDidMount() {
+    }
+
+    getChildContext() {
+        return { muiTheme: getMuiTheme(baseTheme) };
     }
 
     addNewFinding = () => {
@@ -81,7 +89,9 @@ class Publish extends React.Component {
         ajax.submitRecord(this.state)
             .then((response) => {
                 alert('Submitted');
-                console.log(response);
+                var {abstract,conclusion,findings} = this.state;
+                PublishStore.setMetadata(abstract,conclusion,findings);
+                browserHistory.push('/preview/type/'+this.state.type)
             })
             .catch((err) => {
                 console.log(err);
@@ -104,16 +114,11 @@ class Publish extends React.Component {
                 }
                 <header className={css.header}>
                     <div className={css.logoWrap}>
-                        <div className={css.logo}>
-                            <span className={css.logoStrong}>Author</span>
-                            <span  className={css.logoNormal}>Services</span>
-                        </div>
-                        <div className={css.slogan}>
-                            Supporting Taylor & Francis authors
-                        </div>
+                       <div className={css.logoWrap}>
+                            <a href="/dashboard"> <img src="../images/logo.png" alt=""/></a>
+                       </div>
                     </div>
                 </header>
-                <hr/>
                 <section className={css.content}>
                     <div className={css.abstract}>
                         <div className={css.abstractTitle}>
@@ -132,14 +137,20 @@ class Publish extends React.Component {
                     <div className={css.findings}>
                         <h2>Findings</h2>
                         <div className={css.addNewFinding}>
-                            <button onClick={this.addNewFinding}>Add New</button>
+                            <RaisedButton
+                                type="submit"
+                                ref="submit"
+                                label="Add New"
+                                secondary={true} 
+                                onClick={this.addNewFinding}
+                            />
                         </div>
 
                         <div className={css.findingsList}>
                             {this.state.findings.map((finding,i) => {
                                 return (
                                     
-                                    <div key={i} >
+                                    <div key={i} className={css.findingItemItem}>
                                         <textarea data-index={i} 
                                             onChange={this.updateFinding} value={finding.value} />
                                         <br/>
@@ -170,8 +181,24 @@ class Publish extends React.Component {
                     </div>
 
                     <div className={css.submitWrap}>
-                        <button onClick={this.submit}>Submit</button>
-                        <button onClick={this.preview}>Preview</button>
+
+                        <RaisedButton
+                            type="submit"
+                            ref="submit"
+                            label="Submit"
+                            primary={true} 
+                            onClick={this.submit}
+                        />
+
+                        <RaisedButton
+                            type="preview"
+                            ref="preview"
+                            label="Preview"
+                            primary={true} 
+                            style={{marginLeft : '15px'}}
+                            onClick={this.preview}
+                        />
+                       
                     </div>
                 </section>
             </div>
@@ -179,5 +206,10 @@ class Publish extends React.Component {
     }
 
 }
+
+
+Publish.childContextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+};
 
 module.exports = Publish;

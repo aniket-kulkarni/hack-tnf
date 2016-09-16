@@ -1,4 +1,4 @@
-var BASE_URL = 'http://10.42.133.58:3001';
+var BASE_URL = 'http://ec2-52-27-11-189.us-west-2.compute.amazonaws.com:443';
 var UserStore = require('./store/UserStore');
 
 function login(model) {

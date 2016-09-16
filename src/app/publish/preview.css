@@ -3,17 +3,23 @@
 }
 
 .header {
-	height: 100px;
 	display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.35);
 }
 
 .logo {
 	font-size: 2.8em;
     text-transform: uppercase;
     font-weight: 300;
+}
+
+.logoWrap {
+	flex : 1;
+	padding: 10px;
+}
+
+.logoWrap img {
+	width: 150px;
 }
 
 .logoStrong {
@@ -40,6 +46,7 @@
 	min-height: calc(100% - 100px);
 	padding: 0 20px;
 	padding-bottom: 15px;
+	margin-top: 30px;
 }
 
 .findingImage {
