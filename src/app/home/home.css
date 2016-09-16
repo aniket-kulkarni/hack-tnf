@@ -78,7 +78,7 @@
 	border-radius: 10px;
 	box-shadow: 0 0 2px #ccc;
 	padding: 15px;
-	width: 250px;
+	width: 300px;
 }
 
 .loginHeading {
@@ -95,4 +95,52 @@
 
 .registerBox {
 	margin-top: 25px;
+}
+
+.attract {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+
+.attractItem {
+	text-align: center;
+	margin : 0 10px;
+}
+
+.servicesList {
+	display: flex;
+	margin-top: 70px;
+}
+
+.serviceItem {
+	flex : 1;
+}
+
+.services {
+	padding-left: 10%;
+	padding-right: 10%;
+	background: #f4f4f4;
+}
+
+.services > h2 {
+	text-align: center;
+	font-size: 2.6em;
+	color: #3C4858;
+	text-align: center;
+
+	position: relative;
+	top : 20px;
+}
+
+.services h4 {
+	margin-bottom: 6px;
+}
+
+.phoneItem {
+	text-align: center;
+}
+
+.serviceItemBullet {
+	margin-top: 40px;
 }

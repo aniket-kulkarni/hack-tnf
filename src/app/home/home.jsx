@@ -11,6 +11,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import baseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import FontIcon from 'material-ui/FontIcon';
 
 var UserStore = require('../store/UserStore');
 
@@ -102,8 +103,38 @@ class Home extends React.Component {
                                 </p>
                             </section>
 
-                            <section>
-                                
+                            <section className={css.attract}>
+                                <div className={css.attractItem}>
+                                    <div className={css.icon}>
+                                        <FontIcon color="#424242" style={{fontSize:'48px'}} 
+                                            className="material-icons">create
+                                        </FontIcon>
+                                    </div>
+                                    <p>
+                                        Chocolate cake pastry cake cake macaroon croissant chocolate lemon drops candy canes. Halvah dessert tootsie roll cake sweet roll cookie biscuit cake. 
+                                    </p>
+                                </div>
+                                <div className={css.attractItem}>
+                                    <div className={css.icon}>
+                                        <FontIcon color="#3b94d9" style={{fontSize:'48px'}} 
+                                            className="material-icons">language
+                                        </FontIcon>
+                                    </div>
+                                    <p>
+                                        Chocolate cake pastry cake cake macaroon croissant chocolate lemon drops candy canes. Halvah dessert tootsie roll cake sweet roll cookie biscuit cake. 
+                                    </p>
+                                </div>
+                                <div className={css.attractItem}>
+                                    <div className={css.icon}>
+                                        <FontIcon color="#5D4037" style={{fontSize:'48px'}} 
+                                            className="material-icons">weekend
+                                        </FontIcon>
+                                    </div>
+
+                                    <p>
+                                        Chocolate cake pastry cake cake macaroon croissant chocolate lemon drops candy canes. Halvah dessert tootsie roll cake sweet roll cookie biscuit cake. 
+                                    </p>
+                                </div>
                             </section>
                         </div>
                         <div className={css.rightMain}>
@@ -251,6 +282,62 @@ class Home extends React.Component {
 
                         </div>
                     </div>
+
+                     <section className={css.services}>
+                                <h2>Our Services</h2>
+                                <p className={css.servicesDesc}>
+                                    We are driven by perfectionism and the urge to create high quality WordPress themes and
+                                    provide premium and dedicated support to our customers.
+                                </p>
+                                <div className={css.servicesList}>
+                                    <div className={css.serviceItem}>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Cartoon</h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                        </div>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Flyer</h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                        </div>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Video Abstract</h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div className={cx(css.serviceItem,css.phoneItem)}>
+                                        <img src="images/phone.png"/>
+                                    </div>
+
+                                    <div className={css.serviceItem}>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Poster</h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                        </div>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Landing Page</h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                        </div>
+                                        <div className={css.serviceItemBullet}>
+
+                                            <h4>Power Points </h4>
+                                            <div className={css.bulletDesc}>Your website will display beautifully and intuitively on all devices.
+                                            </div>
+                                         </div>
+                                    </div>
+                                </div>
+
+                            </section>
                 </section>
             </div>
         );
