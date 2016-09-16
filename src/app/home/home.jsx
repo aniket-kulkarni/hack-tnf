@@ -49,7 +49,8 @@ class Home extends React.Component {
         ajax.login(model)
             .then((response) => {
                 UserStore.setUser(response);
-                browserHistory.replace('/dashboard');
+                var url = location.protocol + '//' + location.host + '/dashboard';
+                window.location.href = url;
             })
             .catch((err) => {
                 alert(err);
@@ -73,7 +74,8 @@ class Home extends React.Component {
         ajax.register(model)
         .then((response) => {
             UserStore.setUser(response);
-            browserHistory.replace('/dashboard');
+            var url = location.protocol + '//' + location.host + '/dashboard';
+               window.location.href = url;
         });
     }
 
