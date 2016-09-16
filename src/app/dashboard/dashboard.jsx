@@ -52,11 +52,10 @@ class Dashboard extends React.Component {
                <header className={css.header}>
                     <div className={css.logoWrap}>
                         <div className={css.logo}>
-                            <span className={css.logoStrong}>Author</span>
-                            <span  className={css.logoNormal}>Services</span>
+                            <h2 className={css.logoStrong}>Author Services</h2>
                         </div>
                         <div className={css.slogan}>
-                            Supporting Taylor & Francis authors
+                            <h4>Supporting Taylor & Francis Authors</h4>
                         </div>
                     </div>
 
@@ -64,7 +63,6 @@ class Dashboard extends React.Component {
                         <a href="#" onClick={this.logout}>Logout</a>
                     </div>
                 </header>
-                <hr/>
                 <section className={css.content}>
                     <div className={css.left}>
                         <div className={cx(css.welcome,css.card)}>
@@ -73,7 +71,7 @@ class Dashboard extends React.Component {
                                 View your personalized dashboard below to see results so far.
                             </p>
                             <p>
-                                Why not try some of the suggested ideas to sahre your work with other audiences.
+                                Why not try some of the suggested ideas to share your work with other audiences.
                             </p>
                         </div>
                         <div className={cx(css.activity,css.card)}>
@@ -87,41 +85,41 @@ class Dashboard extends React.Component {
                                 <div className={css.recentActivityIcons} >
                                     <div className={css.recentActivityIcon} >
                                         <div className= {css.recentActivityIconLeft}>
-                                            <FontIcon color="#3b94d9" style={{fontSize:'48px'}} className="material-icons">videocam
+                                            <FontIcon color="#fffe00" style={{fontSize:'64px'}} className="material-icons">videocam
                                             </FontIcon>
                                         </div>
                                         <div className= {css.recentActivityIconRight}>
-                                            <p>20</p>
+                                            <h1>20</h1>
                                             <p>Video Views</p>
                                         </div>
                                     </div>
                                     <div className={css.recentActivityIcon} >
                                         <div className= {css.recentActivityIconLeft}>
-                                            <FontIcon color="#3b94d9" style={{fontSize:'48px'}} className="material-icons">assignment_turned_in
+                                            <FontIcon color="#fffe00" style={{fontSize:'64px'}} className="material-icons">assignment_turned_in
                                             </FontIcon>
                                         </div>
                                         <div className= {css.recentActivityIconRight}>
-                                            <p>55</p>
+                                            <h1>54</h1>
                                             <p>Altmetric Score</p>
                                         </div>
                                     </div>
                                     <div className={css.recentActivityIcon} >
                                         <div className= {css.recentActivityIconLeft}>
-                                            <FontIcon color="#3b94d9" style={{fontSize:'48px'}} className="material-icons">cloud_download
+                                            <FontIcon color="#fffe00" style={{fontSize:'64px'}} className="material-icons">cloud_download
                                             </FontIcon>
                                         </div>
                                         <div className= {css.recentActivityIconRight}>
-                                            <p>1270</p>
+                                            <h1>1270</h1>
                                             <p>Article Downloads</p>
                                         </div>
                                     </div>
                                     <div className={css.recentActivityIcon} >
                                         <div className= {css.recentActivityIconLeft}>
-                                            <FontIcon color="#3b94d9" style={{fontSize:'48px'}} className="material-icons">format_quote
+                                            <FontIcon color="#fffe00" style={{fontSize:'64px'}} className="material-icons">format_quote
                                             </FontIcon>
                                         </div>
                                         <div className= {css.recentActivityIconRight}>
-                                            <p>33</p>
+                                            <h1>3</h1>
                                             <p>Citations</p>
                                         </div>
                                     </div>

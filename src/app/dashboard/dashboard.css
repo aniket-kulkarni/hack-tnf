@@ -3,12 +3,12 @@
 }
 
 .header {
-	height: 100px;
 	display: flex;
     align-items: center;
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 50px;
+    padding : 5px 20px;
+    background-color: #ffffff;
+    color : #0088A3;
+    box-shadow: 0 1px 6px rgba(0,0,0,.35);
 }
 
 .logoWrap {
@@ -16,33 +16,26 @@
 }
 
 .logo {
-	font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 300;
 }
 
 .logoStrong {
-	color: #0955A4;
-    font-weight: 400;
 }
 
 .logoNormal {
-	color: #666;
 }
 
 .slogan {
-	margin-left: 80px;
-	color: #0955A4;
     font-weight: 400;
     font-size: 1.15em;
+    color: #80D5E6;
 }
 
 .content {
 	min-height: calc(100% - 100px);
-	padding-bottom: 15px;
+	padding : 20px;
+	margin-top: 5px;
 	display: flex;
-	padding-left: 20px;
-	padding-right: 20px;
+	background-color: #fafafa;
 }
 
 .root > hr {
@@ -51,7 +44,6 @@
 
 .headerActions {
 	position: relative;
-	top : 30px;
 }
 
 .headerActions > a {
@@ -76,6 +68,7 @@
 	padding: 10px 20px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.12),
          0 1px 4px rgba(0,0,0,0.12);
+    background-color: #ffffff;
 }
 
 .activity {
@@ -102,6 +95,9 @@
     flex: 4;
     text-align: center;
     margin: 10px;
+    background: #00AACC;
+    border-radius: 3px;
+    color: #fff;
 }
 
 .servicesIcons{
@@ -145,35 +141,12 @@
          0 1px 4px rgba(0,0,0,0.12);
 }
 
-.activityLink:nth-child(1) {
+.activityLink:nth-child(even) {
 	background-color: #9E9D24;
 
 }
 
 
-.activityLink:nth-child(2) {
-	background-color: #9E9D24;
-
-}
-
-.activityLink:nth-child(3) {
-	background-color: #9E9D24;
-
-}
-
-
-.activityLink:nth-child(4) {
-	background-color: #9E9D24;
-
-}
-
-
-.activityLink:nth-child(5) {
-	background-color: #9E9D24;
-
-}
-
-.activityLink:nth-child(6) {
-	background-color: #9E9D24;
-
+.activityLink:nth-child(odd) {
+	background-color: #D69A2B;
 }
