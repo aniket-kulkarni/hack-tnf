@@ -48,13 +48,7 @@ function register(model) {
 	};
 
 	return (
-		ajax(url,params,true).
-			then((response) => {
-				console.log(response);
-			})	
-			.catch((err) => {
-				console.log(err);
-			})		
+		ajax(url,params,true)	
 	);
 }
 
