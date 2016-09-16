@@ -18,7 +18,7 @@ class Home extends React.Component {
     render() {
         return (
             <div className={css.root}>
-                <a href="/dashboard"> <img src="../images/marketing.jpg" alt=""/> </a>
+                <a href="/login"> <img src="../images/marketing.jpg" alt=""/> </a>
             </div>
         );
     }
