@@ -3,42 +3,45 @@
 }
 
 .header {
-	height: 100px;
 	display: flex;
-    flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding : 5px 20px;
+    background-color: #ffffff;
+    color : #0088A3;
+    box-shadow: 0 1px 6px rgba(0,0,0,.35);
+}
+
+.logoWrap {
+	flex : 1;
+	padding: 10px;
+}
+
+.logoWrap img {
+	width: 150px;
 }
 
 .logo {
-	font-size: 2.8em;
-    text-transform: uppercase;
-    font-weight: 300;
 }
 
 .logoStrong {
-	color: #0955A4;
-    font-weight: 400;
 }
 
 .logoNormal {
-	color: #666;
 }
 
 .slogan {
-	text-align: right;
-	color: #0955A4;
     font-weight: 400;
     font-size: 1.15em;
+    color: #80D5E6;
 }
-
 .root > hr {
 	border-bottom: none;
 }
 
 .content {
 	min-height: calc(100% - 100px);
-	padding-bottom: 15px;
+	padding : 20px;
+	margin-top: 5px;
 }
 
 .main {

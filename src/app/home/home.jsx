@@ -82,16 +82,9 @@ class Home extends React.Component {
             <div className={css.root}>
                 <header className={css.header}>
                     <div className={css.logoWrap}>
-                        <div className={css.logo}>
-                            <span className={css.logoStrong}>Author</span>
-                            <span  className={css.logoNormal}>Services</span>
-                        </div>
-                        <div className={css.slogan}>
-                            Supporting Taylor & Francis authors
-                        </div>
+                        <img src="../images/logo.png" alt=""/>
                     </div>
                 </header>
-                <hr/>
                 <section className={css.content}>
                     <div className={css.main}>
                         <div className={css.leftMain}>
